@@ -1,0 +1,42 @@
+<ion-view style="background-color: #272733;" can-swipe-back="false">
+
+    <ion-header-bar class="bar-dark" align-title="center">
+        <h1 class="title">Events</h1>
+    </ion-header-bar>
+
+    <ion-content class="has-header">
+
+
+        <div style="width:40%; top:100px; left:5%; position: absolute;">
+
+            <ion-list>
+                <ion-item ng-click="vm.addToBasket(book)" ng-repeat="book in vm.bookList">
+                    {{book.title}}
+                </ion-item>
+            </ion-list>
+
+        </div>
+        <div style="width:40%; top:100px; right:5%; position: absolute;">
+
+            <ion-list>
+                <ion-item ng-click="vm.removeFromBasket(book)" ng-repeat="book in vm.basket">
+                    {{book.title}}
+                </ion-item>
+            </ion-list>
+
+        </div>
+
+        <div>
+            <ion-item>
+                {{vm.total}}
+            </ion-item>
+
+        </div>
+
+        
+
+    </ion-content>
+
+    
+
+</ion-view>
