@@ -1,14 +1,10 @@
 <ion-view style="background-color: #272733;" can-swipe-back="false">
 
-    <ion-header-bar class="bar-dark" align-title="center">
-        <h1 class="title">Events</h1>
-    </ion-header-bar>
-
-    <ion-content class="has-header">
+    
 
 
         <div style="width:40%; top:100px; left:5%; position: absolute;">
-
+            <p style="color:white" >Books to buy(click to add to basket)</p>
             <ion-list>
                 <ion-item ng-click="vm.addToBasket(book)" ng-repeat="book in vm.bookList">
                     {{book.title}}
@@ -17,7 +13,7 @@
 
         </div>
         <div style="width:40%; top:100px; right:5%; position: absolute;">
-
+            <p style="color:white">Basket(click to remove from basket)</p>
             <ion-list>
                 <ion-item ng-click="vm.removeFromBasket(book)" ng-repeat="book in vm.basket">
                     {{book.title}}
